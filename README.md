@@ -4,4 +4,4 @@
 
 ![Screenshoot](/design/my-design-desktop.png)
 
-Keeping busy and practicing HTML, CSS and JavaScript with Frontend mentor tasks. It is responsive as that is a norm in all my codes.
+Keeping busy and practicing HTML, CSS and JavaScript with Frontend mentor tasks. It is responsive as that is a norm in my projects.
