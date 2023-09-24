@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+body {
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(0, 0%, 98%);
+    font-family: Poppins;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 2rem;
+    top: 2rem;
+    bottom: 2rem;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header div {
+    display: inherit;
+    gap: 3rem;
+    padding-left: 4rem;
+}
+
+header div nav {
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+}
+
+header div nav a {
+    color: hsl(0, 0%, 8%);
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    width: 6rem;
+    gap: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+}
+
+header div nav a:hover {
+    color: hsl(0, 0%, 0%);
+    font-weight: 600;
+}
+
+header ul {
+    display: inherit;
+    align-items: center;
+    justify-items: flex-end;
+    padding-right: 4rem;
+}
+
+header ul li {
+    list-style: none;
+    width: 6rem;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+header ul li a {
+    color: hsl(0, 0%, 8%);
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+}
+
+header ul li a:hover {
+    color: hsl(0, 0%, 0%);
+    font-weight: 600;
+}
+
+header ul .register-btn {
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 10px;
+}
+
+header ul .register-btn:hover {
+    border: 2px solid hsl(0, 0%, 0%);
+}
+
+section {
+    display: flex;
+    position: relative;
+    color: hsl(0, 0%, 8%);
+    font-size: 1rem;
+    font-weight: 400;
+    top: 4rem;
+    gap: 1rem;
+    width: 100%;
+    height: calc(100vh - 6rem);
+    justify-content: center;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 40%;
+    justify-content: center;
+}
+
+section div h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+}
+
+section div .action-btn {
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+    text-decoration: none;
+    text-align: center;
+    width: 7rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+section div .clients {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+section div .clients img {
+    width: 4rem;
+    height: 1.5rem;
+}
