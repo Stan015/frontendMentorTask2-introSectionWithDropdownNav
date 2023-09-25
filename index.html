@@ -12,17 +12,37 @@
 <body>
     <header>
         <div>
-            <img src="images/logo.svg" alt="logo">
+            <a href="#"><img src="images/logo.svg" alt="logo" class="logo"></a>
       
             <nav>
-                <a href="#">Features <img src="images/icon-arrow-down.svg" alt="icon-arrow-down"></a>
-                <a href="#">Company <img src="images/icon-arrow-down.svg" alt="icon-arrow-down"></a>
-                <a href="#">Careers</a>
-                <a href="#">About</a>
+                <ul class="main-ul">
+                    <li class="nav-features">
+                        <a href="#">Features <img src="images/icon-arrow-up.svg" alt="icon-arrow-up" class="arrow-up-1"><img src="images/icon-arrow-down.svg" alt="icon-arrow-down" class="arrow-down-1"></a>
+                        
+                        <ul id="features-list">
+                            <li><a href="#"><img src="images/icon-todo.svg" alt="todo-list-icon">Todo List</a></li>
+                            <li><a href="#"><img src="images/icon-calendar.svg" alt="calendar-icon">Calendar</a></li>
+                            <li><a href="#"><img src="images/icon-reminders.svg" alt="remindar-icon">Reminders</a></li>
+                            <li><a href="#"><img src="images/icon-planning.svg" alt="planning-icon">Planning</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-company">
+                        <a href="#">Company <img src="images/icon-arrow-up.svg" alt="icon-arrow-up" class="arrow-up-2"><img src="images/icon-arrow-down.svg" alt="icon-arrow-down" class="arrow-down-2"></a>
+                        
+                        <ul id="company-list">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+        
             </nav>        
         </div>
 
-        <ul>
+        <ul class="second-ul">
             <li><a href="#">Login</a></li>
             <li><a href="#"  class="register-btn">Register</a></li>
         </ul>
