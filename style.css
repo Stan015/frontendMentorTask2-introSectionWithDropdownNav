@@ -67,16 +67,13 @@ header nav .main-ul li {
 }
 
 /*first drop-down (features)*/
-.nav-features .arrow-down-1 {
+.arrow-down-1 {
+    transform: rotate(180deg);
+    transition: 0.5s ease;
+}
+
+.features-list {
     display: none;
-}
-
-.nav-company .arrow-up-1 {
-    display: inline-block;
-}
-
-.nav-features ul {
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -91,35 +88,37 @@ header nav .main-ul li {
     border-radius: 1rem;
 }
 
-.nav-features ul li {
+.show-features {
+    display: flex;
+}
+
+
+.features-list li {
     list-style: none;
     text-align: start;
 }
 
-.nav-features ul li a img {
+.features-list li a img {
     position: relative;
     right: 0.6rem;
     margin-left: 0.7rem;
     width: 0.7rem;
 }
 
-.nav-features ul li a {
+.features-list li a {
     font-size: 0.9rem;
     padding-right: 0.8rem;
 }
 /*end*/
 
 /*second drop-down (company)*/
-.nav-company .arrow-down-2 {
+.arrow-down-2 {
+    transform: rotate(180deg);
+    transition: 0.5s ease;
+}
+
+.company-ul {
     display: none;
-}
-
-.nav-company .arrow-up-2 {
-    display: inline-block;
-}
-
-.nav-company ul {
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -134,7 +133,11 @@ header nav .main-ul li {
     border-radius: 1rem;
 }
 
-.nav-company ul li {
+.show-company-ul {
+    display: flex;
+}
+
+.company-ul li {
     position: relative;
     left: 1.3rem;
     list-style: none;
@@ -142,7 +145,7 @@ header nav .main-ul li {
 
 }
 
-.nav-company ul li a {
+.company-ul li a {
     font-size: 0.9rem;
     padding-right: 0.8rem;
 }
