@@ -9,7 +9,8 @@ const companyList = document.getElementById("company-list");
 
 //toggling features dropdown
 const toggleFeatures = () => {
-    features.addEventListener('click', function() {
+    features.addEventListener('click', function(e) {
+        e.stopPropagation();
         featuresArrow.classList.toggle("arrow-down-1");
         featuresList.classList.toggle("show-features");
     });
@@ -28,8 +29,21 @@ const toggleCompany = () => {
 toggleCompany();
 //
 
-// document.documentElement.addEventListener('click', function() {
-//     if(companyList.classList.contains("show-company-ul")) {
-//         toggleCompany();
-//     };
-// });
+//closing either toggles by clicking anywhere 
+document.documentElement.addEventListener('click', function() {
+    if(featuresList.classList.contains("show-features")) {
+        featuresList.classList.remove("show-features");
+    };
+    
+    if(featuresArrow.classList.contains("arrow-down-1")) {
+        featuresArrow.classList.remove("arrow-down-1");
+    };
+    //
+    if(companyList.classList.contains("show-company-ul")) {
+        companyList.classList.remove("show-company-ul");
+    };
+    
+    if(companyArrow.classList.contains("arrow-down-2")) {
+        companyArrow.classList.remove("arrow-down-2");
+    };
+});
