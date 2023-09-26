@@ -12,9 +12,9 @@
 <body>
     <header>
         <div>
-            <a href="#"><img src="images/logo.svg" alt="logo" class="logo"></a>
-      
-            <nav>
+            <a href="#" class="click-logo"><img src="images/logo.svg" alt="logo" class="logo"></a>
+
+            <nav id="header-nav">
                 <ul class="main-ul">
                     <li class="nav-features">
                         <a href="#">Features <img src="images/icon-arrow-down.svg" alt="icon-arrow-down" id="features-arrow"></a>
@@ -38,17 +38,25 @@
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
-        
-            </nav>        
-        </div>
+            
+                <ul class="second-ul">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#"  class="register-btn">Register</a></li>
+                </ul>
 
-        <ul class="second-ul">
-            <li><a href="#">Login</a></li>
-            <li><a href="#"  class="register-btn">Register</a></li>
-        </ul>
+            </nav>     
+            
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
     </header>
 
     <section class="banner">
+
+        <img src="images/image-hero-mobile.png" alt="hero-image-mobile" class="hero-image-mobile">
 
         <div>
             <h1>Make <br>remote work</h1>
@@ -69,7 +77,7 @@
             </p>
         </div>
 
-        <img src="images/image-hero-desktop.png" alt="hero-image">
+        <img src="images/image-hero-desktop.png" alt="hero-image-desktop" class="hero-image-desktop">
 
     </section>
 

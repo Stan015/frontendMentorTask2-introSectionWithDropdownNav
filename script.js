@@ -47,3 +47,15 @@ document.documentElement.addEventListener('click', function() {
         companyArrow.classList.remove("arrow-down-2");
     };
 });
+//
+
+//toggling burger menu
+const burger = document.querySelector(".burger");
+const navList = document.getElementById("header-nav");
+
+
+burger.addEventListener('click', function() {
+    burger.classList.toggle("toggle");
+    navList.classList.toggle("nav-active");
+});
+//

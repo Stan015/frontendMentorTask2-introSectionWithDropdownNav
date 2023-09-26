@@ -14,29 +14,38 @@ body {
 header {
     display: flex;
     position: relative;
-    width: 100%;
+    width: inherit;
     height: 2rem;
     top: 2rem;
     bottom: 2rem;
     align-items: center;
     justify-content: space-between;
+    /* overflow: hidden; */
 }
 
 header div {
-    display: inherit;
+    display: flex;
+    width: 100%;
     gap: 3rem;
-    padding-left: 4rem;
+    justify-content: space-between;
+    align-items: center;
 }
-
+header .click-logo {
+    display: inherit;
+    align-items: center;
+}
 .logo {
     width: 5rem;
     height: inherit;
+    padding-left: 4rem;
 }
 
 header div nav {
-    display: inherit;
+    display: flex;
+    width: calc(100% - 7rem);
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+    padding-right: 4rem;
 }
 
 header div nav a {
@@ -149,13 +158,11 @@ header nav .main-ul li {
     font-size: 0.9rem;
     padding-right: 0.8rem;
 }
-/*end*/
+/**/
 
 header .second-ul {
     display: inherit;
     align-items: center;
-    justify-items: flex-end;
-    padding-right: 4rem;
 }
 
 header .second-ul li {
@@ -187,6 +194,39 @@ header ul .register-btn:hover {
     border: 2px solid hsl(0, 0%, 0%);
 }
 
+.burger {
+    display: none;
+    padding-right: 4rem;
+    width: 3rem;
+    z-index: 5;
+}
+
+.burger div {
+    height: 0.3rem;
+    padding: 0;
+    border-radius: 0.3rem;
+    background: hsl(0, 0%, 8%);
+    margin: 0.3rem;
+    transition:all 0.5s ease;
+}
+
+.toggle .line1 {
+    transform: rotate(45deg);
+}
+
+.toggle .line2 {
+    display: none;
+}
+
+.toggle .line3 {
+    transform: rotate(-45deg);
+}
+
+.nav-active {
+    display: flex;
+    transform: translateX(0%);
+}
+
 section {
     display: flex;
     position: relative;
@@ -195,9 +235,10 @@ section {
     font-weight: 400;
     top: 5rem;
     gap: 1rem;
-    width: 100%;
+    width: calc(100vw - 2rem);
     height: calc(100vh - 7rem);
     justify-content: center;
+    padding: 0 1rem;
 }
 
 section div {
@@ -245,6 +286,10 @@ section div .clients img {
     height: 1.5rem;
 }
 
+.hero-image-mobile {
+    display: none;
+}
+
 .attribution {
     color: hsl(0, 0%, 8%);
     font-size: 1rem;
@@ -256,4 +301,251 @@ section div .clients img {
     color: hsl(0, 0%, 8%);
     font-style: italic;
     text-decoration: none;
+}
+
+@media screen and (min-width: 280px) and (max-width: 425px){
+    .logo {
+        padding-left: 2rem;
+    }
+    
+    header div nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        gap: 1.5rem;
+        top: -2rem;
+        right: 0;
+        width: 12rem;
+        padding: 0 3rem;
+        height: 48rem;
+        background-color: #ffff;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 4;
+        transform: translateX(100%);
+        transition:all 0.5s ease;
+    }
+    
+    header nav .main-ul {
+        display: flex;
+        flex-direction: column;
+        padding-top: 7rem;
+        width: 100%;
+        list-style: none;
+        gap: 1rem;
+        text-align: start;
+        justify-content: flex-start;
+    }
+    
+    header nav .main-ul li {
+        width: 8rem;
+    }
+    
+    /*first drop-down (features)*/
+    
+    .features-list {
+        align-items: center;
+        position: relative; 
+        top: 0;
+        left: 2rem;
+    }
+    
+    /*end*/
+    
+    /*second drop-down (company)*/ 
+    .company-ul {
+        align-items: center;
+        position: relative; 
+        top: 0;
+        left: 2rem;
+    }
+    /**/
+    
+    header .second-ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header .second-ul li {
+        width: 10rem;
+    }
+
+    header ul .register-btn {
+        display: inherit;
+        width: 9rem;
+    }
+    
+    .burger {
+        display: block;
+        padding-right: 2rem;
+    }
+    
+    /*first section*/
+    section {
+        flex-direction: column;
+        top: 5rem;
+        gap: 1rem;
+        width: 100vw;
+        height: auto;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-image-desktop {
+        display: none;
+    }
+
+    .hero-image-mobile {
+        display: block;
+        width: inherit;
+        height: 15rem;
+    }
+    
+    section div {
+        gap: 1rem;
+        width: 95%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    section div h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 3rem;
+    }
+
+    section div h1 br {
+        display: none;
+    }
+    
+    section div .clients {
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px){
+    .logo {
+        padding-left: 2rem;
+    }
+
+    header div nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        gap: 1.5rem;
+        top: -2rem;
+        right: 0;
+        width: 12rem;
+        padding: 0 3rem;
+        height: 48rem;
+        background-color: #ffff;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 4;
+        transform: translateX(100%);
+        transition:all 0.5s ease;
+    }
+    
+    header nav .main-ul {
+        display: flex;
+        flex-direction: column;
+        padding-top: 7rem;
+        width: 100%;
+        list-style: none;
+        gap: 1rem;
+        text-align: start;
+        justify-content: flex-start;
+    }
+    
+    header nav .main-ul li {
+        width: 8rem;
+    }
+    
+    /*first drop-down (features)*/
+    
+    .features-list {
+        align-items: center;
+        position: relative; 
+        top: 0;
+        left: 2rem;
+    }
+    
+    /*end*/
+    
+    /*second drop-down (company)*/ 
+    .company-ul {
+        align-items: center;
+        position: relative; 
+        top: 0;
+        left: 2rem;
+    }
+    /**/
+    
+    header .second-ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header .second-ul li {
+        width: 10rem;
+    }
+
+    header ul .register-btn {
+        display: inherit;
+        width: 9rem;
+    }
+    
+    .burger {
+        display: block;
+        padding-right: 2rem;
+    }
+    
+    /*first section*/
+    section {
+        flex-direction: column;
+        top: 5rem;
+        gap: 1rem;
+        width: 100vw;
+        height: auto;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-image-desktop {
+        display: none;
+    }
+
+    .hero-image-mobile {
+        display: block;
+        width: inherit;
+        height: 17rem;
+        z-index: 0;
+    }
+    
+    section div {
+        gap: 1rem;
+        width: 95%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    section div h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 3rem;
+    }
+
+    section div h1 br {
+        display: none;
+    }
+    
+    section div .clients {
+        justify-content: center;
+        align-items: center;
+    }
+
 }
